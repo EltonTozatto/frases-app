@@ -22,19 +22,29 @@ class IncluirFraseActivity : AppCompatActivity() {
         configurarListenerSalvarButton()
     }
 
+    private fun configurarListenerCancelarButton() {
+        binding.btnCancelar.setOnClickListener {
+            finish()
+        }
+    }
+
     private fun configurarListenerSalvarButton() {
+        salvarFrase()
+    }
+
+    private fun salvarFrase() {
         binding.apply {
             btnSalvar.setOnClickListener {
                 val autor = autorFrasesET.text.toString()
                 val frase = frasesET.text.toString()
 
                 autorFrasesTIL.error = if (autor.isEmpty())
-                    getString(R.string.err_sem_autor)
+                    getString(R.string.erro_sem_autor)
                 else
                     null
 
                 frasesTIL.error = if (frase.isEmpty())
-                    getString(R.string.err_sem_frase)
+                    getString(R.string.erro_sem_frase)
                 else
                     null
 
@@ -43,12 +53,6 @@ class IncluirFraseActivity : AppCompatActivity() {
                     finish()
                 }
             }
-        }
-    }
-
-    private fun configurarListenerCancelarButton() {
-        binding.btnCancelar.setOnClickListener {
-            finish()
         }
     }
 }
