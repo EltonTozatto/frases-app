@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/margem_padrao"
+    android:padding="@dimen/margem_padrao"
     tools:context=".ui.incluirfrase.IncluirFraseActivity">
 
     <com.google.android.material.textfield.TextInputLayout

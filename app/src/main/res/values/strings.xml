@@ -6,4 +6,6 @@
     <string name="citacao">Citação:</string>
     <string name="button_cancelar">Cancelar</string>
     <string name="button_salvar">Salvar</string>
+    <string name="err_sem_autor">Por favor, preencha o nome do autor.</string>
+    <string name="err_sem_frase">Por favor, preencha a frase.</string>
 </resources>
