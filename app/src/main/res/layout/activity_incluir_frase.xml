@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/margem_padrao"
     tools:context=".ui.incluirfrase.IncluirFraseActivity">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -26,6 +27,7 @@
         android:id="@+id/frasesTIL"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margem_interna"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/autorFrasesTIL">
@@ -34,27 +36,32 @@
             android:id="@+id/frasesET"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="start|top"
             android:hint="@string/citacao"
             android:inputType="textCapSentences|textMultiLine"
             android:minLines="4" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/btnCancelar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/frasesTIL"
+        android:layout_marginTop="@dimen/margem_interna"
+        android:layout_marginEnd="@dimen/margem_interna_pequena"
         android:text="@string/button_cancelar"
-        android:id="@+id/btnCancelar"
-        app:layout_constraintEnd_toStartOf="@id/btnSalvar" />
+        app:layout_constraintEnd_toStartOf="@id/btnSalvar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frasesTIL" />
 
     <Button
+        android:id="@+id/btnSalvar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSalvar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/frasesTIL"
+        android:layout_marginStart="@dimen/margem_interna_pequena"
+        android:layout_marginTop="@dimen/margem_interna"
         android:text="@string/button_salvar"
-        app:layout_constraintStart_toEndOf="@id/btnCancelar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCancelar"
+        app:layout_constraintTop_toBottomOf="@id/frasesTIL" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
