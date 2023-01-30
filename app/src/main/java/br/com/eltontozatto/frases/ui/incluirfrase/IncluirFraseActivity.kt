@@ -1,10 +1,12 @@
 package br.com.eltontozatto.frases.ui.incluirfrase
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import br.com.eltontozatto.frases.R
+import br.com.eltontozatto.frases.data.Frase
 import br.com.eltontozatto.frases.databinding.ActivityIncluirFraseBinding
+import br.com.eltontozatto.frases.ui.main.MainActivity
 
 class IncluirFraseActivity : AppCompatActivity() {
     private lateinit var binding: ActivityIncluirFraseBinding
@@ -49,7 +51,10 @@ class IncluirFraseActivity : AppCompatActivity() {
                     null
 
                 if (autor.isNotEmpty() && frase.isNotEmpty()) {
-                    Toast.makeText(applicationContext, "Autor: $autor Frase: $frase", Toast.LENGTH_LONG).show()
+                    Intent().apply {
+                        putExtra(MainActivity.RETORNO, Frase(autor = autor, frase = frase))
+                        setResult(RESULT_OK, this)
+                    }
                     finish()
                 }
             }
