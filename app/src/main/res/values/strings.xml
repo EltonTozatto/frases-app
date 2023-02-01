@@ -8,4 +8,5 @@
     <string name="button_salvar">Salvar</string>
     <string name="erro_sem_autor">Por favor, preencha o nome do autor.</string>
     <string name="erro_sem_frase">Por favor, preencha a frase.</string>
+    <string name="lista_limpa_sucesso">Lista limpa com sucesso</string>
 </resources>
